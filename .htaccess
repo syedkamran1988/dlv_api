@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+	#Options +FollowSymlinks
+	RewriteEngine On	
+	RewriteRule ^([^./\\"'?#]+)$ index.php?page=$1 [L,QSA]
+	RewriteRule ^/?([^./\\"'?#]+)/([^./\\"'?#]+)$  index.php?class=$1&method=$2 [L,QSA]
+</IfModule>
